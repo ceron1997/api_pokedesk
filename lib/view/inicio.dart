@@ -47,7 +47,7 @@ class _PokemonesState extends State<Pokemones> {
   void initState() {
     _cargarData();
     _scrollController
-        .addListener(_scrollListener); // Agrega el Listener al ScrollController
+        .addListener(_scrollListener); 
     super.initState();
   }
 
@@ -96,7 +96,7 @@ class _PokemonesState extends State<Pokemones> {
   @override
   void dispose() {
     _scrollController
-        .dispose(); // Asegúrate de llamar a dispose en el ScrollController
+        .dispose(); 
     super.dispose();
   }
 
@@ -120,8 +120,8 @@ class _PokemonesState extends State<Pokemones> {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => const Pokemon(
-                      /* Aquí puedes pasar cualquier información adicional necesaria para la pantalla de detalle */),
+                  builder: (context) =>
+                      Pokemon(url: json_Poke['results'][index]['url']),
                 ),
               );
             },
